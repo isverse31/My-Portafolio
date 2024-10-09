@@ -165,7 +165,7 @@ export default function Contact() {
             <a href="https://linkedin.com/in/dario-reyes" target="_blank" rel="noopener noreferrer" style={{ color: '#0077B5', transition: 'transform 0.3s' }}>
               <FaLinkedin size={40} onMouseOver={(e) => e.target.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'} />
             </a>
-            <a href="https://github.com/darioreyes" target="_blank" rel="noopener noreferrer" style={{ color: '#000', transition: 'transform 0.3s' }}>
+            <a href="https://github.com/isverse31" target="_blank" rel="noopener noreferrer" style={{ color: '#000', transition: 'transform 0.3s' }}>
               <FaGithub size={40} onMouseOver={(e) => e.target.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'} />
             </a>
           </div>

@@ -73,7 +73,7 @@ export default function About() {
         <section style={{ marginTop: '50px', padding: '20px', backgroundColor: '#f7f7f7' }}>
           <h2>Intereses Personales</h2>
           <p>Fuera del trabajo, disfruto explorar tecnologías emergentes, aprender sobre Linux, y colaborar en proyectos open source. 
-            Además, soy un entusiasta del ciclismo y la fotografía, lo que me permite mantenerme creativo tanto en lo profesional como en lo personal.
+            Además, soy un entusiasta del ajedrez y del fútbol, lo que me permite mantenerme creativo tanto en lo profesional como en lo personal.
           </p>
         </section>
 

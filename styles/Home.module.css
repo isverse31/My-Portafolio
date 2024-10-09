@@ -1,0 +1,94 @@
+.main {
+    padding: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #0070f3;
+  }
+  
+  .presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+  }
+  
+  .introText {
+    margin-left: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .btnPrimary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0070f3, #00aaff);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .btnPrimary:hover {
+    background: linear-gradient(90deg, #005bb5, #0070f3);
+  }
+  
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .skillsList ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .carousel {
+    width: 50%;
+  }
+  
+  .experience {
+    margin-top: 50px;
+  }
+  
+  .experienceItem {
+    margin-top: 20px;
+  }
+  
+  .experienceDate {
+    font-style: italic;
+    color: gray;
+  }
+  
+  .stats {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .certifications {
+    margin-top: 50px;
+  }
+  
+  .testimonials {
+    margin-top: 50px;
+  }
+  
+  .testimonialItem {
+    margin-top: 20px;
+  }
+  
+  .contact {
+    margin-top: 50px;
+    text-align: center;
+  }
+  

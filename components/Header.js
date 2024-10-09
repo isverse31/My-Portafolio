@@ -10,6 +10,7 @@ export default function Header() {
           <li><a href="/projects">Proyectos</a></li>
           <li><a href="/about">Sobre mí</a></li>
           <li><a href="/contact">Contacto</a></li>
+          <li><a href="/chat">chat</a></li>
         </ul>
       </nav>
     </header>
