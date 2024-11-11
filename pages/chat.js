@@ -48,6 +48,7 @@ function ChatbotComponent() {
   ];
 
   return (
+    
     <div className={styles.chatbotContainer}>
       <ChatBot
         key={key}
@@ -61,6 +62,15 @@ function ChatbotComponent() {
           boxShadow: '0 0 10px rgba(0,0,0,0.1)',
         }}
       />
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className={styles.backgroundVideo}
+      >
+        <source src="/espacio2.mp4" type="video/mp4" />
+      </video>
     </div>
   );
 }

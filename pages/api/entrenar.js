@@ -1,4 +1,4 @@
-import { trainBot } from '/data/knowledgeBase'; // Cambia la ruta del chatbot según tu estructura
+import { trainBot } from '/data/knowledgeBase'; //ruta de la base de datos
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {

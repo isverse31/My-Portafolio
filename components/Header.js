@@ -7,8 +7,8 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul>
           <li><a href="/">Inicio</a></li>
-          <li><a href="/projects">Proyectos</a></li>
           <li><a href="/about">Sobre mí</a></li>
+          <li><a href="/projects">Proyectos</a></li>
           <li><a href="/contact">Contacto</a></li>
           <li><a href="/chat">chat</a></li>
         </ul>

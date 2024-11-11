@@ -7,7 +7,7 @@
   }
   
   .projectCard {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.541);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -16,7 +16,7 @@
   
   .projectCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(245, 244, 244, 0.1);
   }
   
   .projectCard h2 {
@@ -24,10 +24,13 @@
     margin-bottom: 0.75rem;
     color: #333;
   }
+  .titulo{
+    color:bisque;
+  }
   
   .projectCard p {
     margin-bottom: 1.5rem;
-    color: #666;
+    color: #f3f1f1;
   }
   
   .projectCard a {
@@ -42,4 +45,14 @@
   .projectCard a:hover {
     color: #0056b3;
     border-bottom: 2px solid #0056b3;
+  }
+
+  .backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }

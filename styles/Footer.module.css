@@ -1,26 +1,20 @@
-
 .footer {
-    background-color: #282c34;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 0.875rem;
-  }
-  
-  .footer a {
-    color: #61dafb;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; /* Asegúrate de que el padding no cause desbordamiento */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem; /* Cambié el punto para que sea más consistente */
+}
+
+.footer a {
+  color: #61dafb;
+  text-decoration: none;
+}

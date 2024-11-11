@@ -25,8 +25,17 @@ export default function Projects() {
       <Header />
 
       <main>
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className={styles.backgroundVideo}
+      >
+        <source src="/espacio2.mp4" type="video/mp4" />
+      </video>
         <section>
-          <h1>Mis Proyectos</h1>
+          <h1 className={styles.titulo}>Mis Proyectos</h1>
           <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />

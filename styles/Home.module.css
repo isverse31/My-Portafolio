@@ -1,94 +1,108 @@
+.mainContainer {
+  /*background-image: url('/fondo1.jpg');*/ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 74.5vh; /* Se puede mantener porque es responsivo */
+  width: 100%;
+  height: 10%; /* Cambiado a 100vw para que ocupe toda la vista */
+  margin: 6.1% -0.6% 0; /* Simplificado utilizando abreviaturas */
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .main {
-    padding: 20px;
-  }
-  
-  .intro {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
+  padding: 3rem 1.5rem;
+  max-width: 1200px; /* Limita el ancho máximo de la página */
+  margin: 0 auto; /* Centra el contenido */
+}
+.intro {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 2.5rem; /* Podrías cambiar a un tamaño más responsivo */
+  color: #f9fbfd;
+}
+
+/* Ajustes para la presentación en pantallas pequeñas */
+.presentation {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para pantallas pequeñas */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 150px; /* Tamaño fijo pero puede adaptarse si se quiere */
+  height: 150px; /* Mantener aspecto cuadrado */
+}
+
+.introText {
+  margin-left: 40px; /* Podrías usar padding para evitar problemas de alineación */
+  font-size: 1.3rem;
+  margin-right: 5%;
+  color: white;
+  text-align: center; /* Alineado a la izquierda en pantallas pequeñas */
+}
+
+/* Botón primario */
+.btnPrimary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #0070f3, #00aaff);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(90deg, #005bb5, #0070f3);
+}
+
+/* Media Queries para mayor responsividad */
+@media (max-width: 598px) {
   .title {
-    font-size: 2.5rem;
-    color: #0070f3;
-  }
-  
-  .presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .profileImage {
-    border-radius: 50%;
+    font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
   }
   
   .introText {
-    margin-left: 20px;
-    font-size: 1.2rem;
+    margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+    text-align: center; /* Centrar texto en pantallas pequeñas */
   }
-  
+
+  .presentation {
+    flex-direction: column; /* Mantener columna para pantallas pequeñas */
+  }
+
+  .profileImage {
+    width: 140px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+    height: 140px; /* Mantener el mismo aspecto */
+  }
+
   .btnPrimary {
-    display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #0070f3, #00aaff);
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
+    padding: 8px 16px; /* Tamaño reducido del botón en pantallas pequeñas */
   }
-  
-  .btnPrimary:hover {
-    background: linear-gradient(90deg, #005bb5, #0070f3);
+}
+
+@media (max-width: 580px) {
+  .title {
+    font-size: 1.5rem; /* Tamaño de fuente aún más pequeño */
   }
-  
-  .skills {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+
+  .introText {
+    font-size: 1rem; /* Tamaño de fuente del texto introductorio */
   }
-  
-  .skillsList ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .carousel {
-    width: 50%;
-  }
-  
-  .experience {
-    margin-top: 50px;
-  }
-  
-  .experienceItem {
-    margin-top: 20px;
-  }
-  
-  .experienceDate {
-    font-style: italic;
-    color: gray;
-  }
-  
-  .stats {
-    margin-top: 50px;
-    text-align: center;
-  }
-  
-  .certifications {
-    margin-top: 50px;
-  }
-  
-  .testimonials {
-    margin-top: 50px;
-  }
-  
-  .testimonialItem {
-    margin-top: 20px;
-  }
-  
-  .contact {
-    margin-top: 50px;
-    text-align: center;
-  }
-  
+}
