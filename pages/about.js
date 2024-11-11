@@ -19,6 +19,7 @@ export default function About() {
     { src: '/DARÍOREYES TOMÁS-CCNAv7 Introduct-certificate.png', alt: 'DARÍOREYES TOMÁS-CCNAv7 Introduct-certificate' },
     { src: '/DARÍOREYES TOMÁS-CCNAv7 Switching-certificate.png', alt: 'DARÍOREYES TOMÁS-CCNAv7 Switching-certificate' },
     { src: '/DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate.png', alt: 'DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate' },
+    { src: '/scrum_DarioReyesTomas.png', alt: 'Scrum-DaríoReyesTomás'},
   ];
 
   const openModal = (image) => {
