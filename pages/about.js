@@ -20,6 +20,7 @@ export default function About() {
     { src: '/DARÍOREYES TOMÁS-CCNAv7 Switching-certificate.png', alt: 'DARÍOREYES TOMÁS-CCNAv7 Switching-certificate' },
     { src: '/DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate.png', alt: 'DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate' },
     { src: '/scrum_DarioReyesTomas.png', alt: 'Scrum-DaríoReyesTomás'},
+    { src: '/programing.jpg', alt: 'programming'},
   ];
 
   const openModal = (image) => {
@@ -38,13 +39,14 @@ export default function About() {
         <title>Sobre Mí - Mi Portafolio</title>
         <meta name="description" content="Información sobre Darío" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       <Header />
 
       <main className={styles.mainContainer}>
 
-      <video 
+      {/* <video 
         autoPlay 
         muted 
         loop 
@@ -52,29 +54,30 @@ export default function About() {
         className={styles.backgroundVideo}
       >
         <source src="/espacio2.mp4" type="video/mp4" />
-      </video>
+      </video> */}
         {/* Sección de introducción */}
         <section style={{ padding: '20px', textAlign: 'center' }}>
-          <h1 className={styles.sobremi}>Sobre Mí</h1>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Image 
-              src="/yo6.jpg" 
-              alt="Mi foto"
-              width={180} 
-              height={180}
-              style={{ borderRadius: '10%' }}
-            />
-            <div style={{ marginLeft: '20px', maxWidth: '600px' }}>
-              <p className={styles.sobremi}>
-                Hola, soy Darío, un desarrollador web y móvil apasionado por crear soluciones innovadoras y eficientes. 
-                Con una sólida experiencia en desarrollo frontend y backend, me encanta enfrentar desafíos y aprender nuevas tecnologías.
-              </p>
-              <p className={styles.sobremi}>
-                He trabajado en proyectos que van desde pequeñas aplicaciones móviles hasta complejas plataformas web, siempre buscando mejorar la experiencia del usuario.
-              </p>
-            </div>
-          </div>
-        </section>
+  <h1 className={styles.sobremi}>Sobre Mí</h1>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <Image 
+      src="/yo6.jpg" 
+      alt="Mi foto"
+      width={180} 
+      height={180}
+      style={{ borderRadius: '10%' }}
+    />
+    <div style={{ marginLeft: '20px', maxWidth: '600px', textAlign: 'left' }}>
+      <p className={styles.sobremiTexto}>
+        Hola, soy Darío, un desarrollador web y móvil apasionado por crear soluciones innovadoras y eficientes. 
+        Con una sólida experiencia en desarrollo frontend y backend, me encanta enfrentar desafíos y aprender nuevas tecnologías.
+      </p>
+      <p className={styles.sobremiTexto}>
+        He trabajado en proyectos que van desde pequeñas aplicaciones móviles hasta complejas plataformas web, siempre buscando mejorar la experiencia del usuario.
+      </p>
+    </div>
+  </div>
+</section>
+
 
         {/* Sección de habilidades con carrusel */}
         <section className={styles.skills}>
@@ -104,6 +107,14 @@ export default function About() {
               </div>
               <div>
                 <img src="/bitacora3.png" alt="Backend Development" />
+                <p className="legend">Backend Development</p>
+              </div>
+              <div>
+                <img src="/Dispensador1.png" alt="Backend Development" />
+                <p className="legend">Backend Development</p>
+              </div>
+              <div>
+                <img src="/Dispensador2.png" alt="Backend Development" />
                 <p className="legend">Backend Development</p>
               </div>
             </Carousel>
@@ -161,31 +172,31 @@ export default function About() {
         )}
 
         {/* Barra de progreso de habilidades */}
-        <section style={{ marginTop: '50px', padding: '20px' }} className={styles.sobremi}>
+        <section className={styles.skillsSection}>
           <h2 className={styles.sobremi}>Competencias Técnicas</h2>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <div style={{ marginBottom: '15px' }}>
+          <div className={styles.skillsContainer}>
+            <div className={styles.skill}>
               <p>React</p>
-              <div style={{ backgroundColor: '#ddd', borderRadius: '5px' }}>
-                <div style={{ width: '90%', backgroundColor: '#0070f3', padding: '5px', borderRadius: '5px' }}></div>
+              <div className={styles.skillBar}>
+                <div className={`${styles.skillLevel} ${styles.react}`}></div>
               </div>
             </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div className={styles.skill}>
               <p>Next.js</p>
-              <div style={{ backgroundColor: '#ddd', borderRadius: '5px' }}>
-                <div style={{ width: '85%', backgroundColor: '#0070f3', padding: '5px', borderRadius: '5px' }}></div>
+              <div className={styles.skillBar}>
+                <div className={`${styles.skillLevel} ${styles.nextjs}`}></div>
               </div>
             </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div className={styles.skill}>
               <p>Node.js</p>
-              <div style={{ backgroundColor: '#ddd', borderRadius: '5px' }}>
-                <div style={{ width: '80%', backgroundColor: '#0070f3', padding: '5px', borderRadius: '5px' }}></div>
+              <div className={styles.skillBar}>
+                <div className={`${styles.skillLevel} ${styles.nodejs}`}></div>
               </div>
             </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div className={styles.skill}>
               <p>Git</p>
-              <div style={{ backgroundColor: '#ddd', borderRadius: '5px' }}>
-                <div style={{ width: '95%', backgroundColor: '#0070f3', padding: '5px', borderRadius: '5px' }}></div>
+              <div className={styles.skillBar}>
+                <div className={`${styles.skillLevel} ${styles.git}`}></div>
               </div>
             </div>
           </div>
@@ -200,26 +211,26 @@ export default function About() {
         </section>
 
         {/* Sección de hobbies */}
-        <section style={{ marginTop: '50px', padding: '20px', textAlign: 'center', color: 'white'}}>
+        <section className={styles.hobbiesSection}>
           <h2 className={styles.sobremi}>Hobbies</h2>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-            <div style={{ textAlign: 'center' }}>
+          <div className={styles.hobbiesContainer}>
+            <div className={styles.hobby}>
               <Image 
                 src="/ajedrez.jpeg" 
                 alt="ajedrez"
                 width={150} 
                 height={150}
-                style={{ borderRadius: '50%' }}
+                className={styles.hobbyImage}
               />
               <p>ajedrez</p>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div className={styles.hobby}>
               <Image 
                 src="/futbol.jpeg" 
                 alt="Fútbol"
                 width={150} 
                 height={150}
-                style={{ borderRadius: '50%' }}
+                className={styles.hobbyImage}
               />
               <p>Fútbol</p>
             </div>

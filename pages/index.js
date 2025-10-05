@@ -18,15 +18,7 @@ export default function Home() {
       <Header />
 
       <main className={styles.mainContainer}>
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-        className={styles.backgroundVideo}
-      >
-        <source src="/espacio2.mp4" type="video/mp4" />
-      </video>
+      
         {/* Sección de presentación */}
         <section className={styles.intro}>
           <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.title}>

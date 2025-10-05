@@ -1,108 +1,207 @@
+
+
+/* Contenedor principal mejorado */
 .mainContainer {
-  /*background-image: url('/fondo1.jpg');*/ 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 74.5vh; /* Se puede mantener porque es responsivo */
+  position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 10%; /* Cambiado a 100vw para que ocupe toda la vista */
-  margin: 6.1% -0.6% 0; /* Simplificado utilizando abreviaturas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.backgroundVideo {
+/* Overlay semi-transparente */
+.mainContainer::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  background: var(--overlay);
+  z-index: 0;
 }
 
+/* Contenido principal */
 .main {
-  padding: 3rem 1.5rem;
-  max-width: 1200px; /* Limita el ancho máximo de la página */
-  margin: 0 auto; /* Centra el contenido */
-}
-.intro {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título mejorado */
 .title {
-  font-size: 2.5rem; /* Podrías cambiar a un tamaño más responsivo */
-  color: #f9fbfd;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
 }
 
-/* Ajustes para la presentación en pantallas pequeñas */
+/* Sección de presentación mejorada */
 .presentation {
   display: flex;
-  flex-direction: column; /* Cambiado a columna para pantallas pequeñas */
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
+  gap: 4rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
 }
 
+/* Imagen de perfil mejorada */
 .profileImage {
   border-radius: 50%;
-  width: 150px; /* Tamaño fijo pero puede adaptarse si se quiere */
-  height: 150px; /* Mantener aspecto cuadrado */
+  width: clamp(150px, 25vw, 250px);
+  height: clamp(150px, 25vw, 250px);
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(var(--primary-color), 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
+.profileImage:hover {
+  transform: scale(1);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(var(--primary-color), 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Texto introductorio mejorado */
 .introText {
-  margin-left: 40px; /* Podrías usar padding para evitar problemas de alineación */
-  font-size: 1.3rem;
-  margin-right: 5%;
-  color: white;
-  text-align: center; /* Alineado a la izquierda en pantallas pequeñas */
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-color);
+  line-height: 1.8;
+  text-align: left;
+  max-width: 600px;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
 }
 
-/* Botón primario */
+.introText:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+/* Botón mejorado con accesibilidad */
 .btnPrimary {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #0070f3, #00aaff);
-  color: #fff;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  border-radius: 12px;
   text-decoration: none;
-  transition: background 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.8s;
 }
 
 .btnPrimary:hover {
-  background: linear-gradient(90deg, #005bb5, #0070f3);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 24px rgba(var(--primary-color), 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries para mayor responsividad */
-@media (max-width: 598px) {
-  .title {
-    font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+.btnPrimary:hover::before {
+  left: 100%;
+}
+
+.btnPrimary:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Mejoras de responsividad */
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column;
+    gap: 2rem;
   }
   
   .introText {
-    margin-left: 0; /* Eliminar margen en pantallas pequeñas */
-    text-align: center; /* Centrar texto en pantallas pequeñas */
-  }
-
-  .presentation {
-    flex-direction: column; /* Mantener columna para pantallas pequeñas */
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
   }
 
   .profileImage {
-    width: 140px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
-    height: 140px; /* Mantener el mismo aspecto */
-  }
-
-  .btnPrimary {
-    padding: 8px 16px; /* Tamaño reducido del botón en pantallas pequeñas */
+    order: -1;
   }
 }
 
-@media (max-width: 580px) {
-  .title {
-    font-size: 1.5rem; /* Tamaño de fuente aún más pequeño */
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem 1rem;
   }
+  
+  .btnPrimary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
 
-  .introText {
-    font-size: 1rem; /* Tamaño de fuente del texto introductorio */
-  }
+/* Animación de partículas opcional (requiere HTML adicional) */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
