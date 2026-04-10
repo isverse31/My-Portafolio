@@ -1,0 +1,207 @@
+
+
+/* Contenedor principal mejorado */
+.mainContainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Overlay semi-transparente */
+.mainContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  z-index: 0;
+}
+
+/* Contenido principal */
+.main {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título mejorado */
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+/* Sección de presentación mejorada */
+.presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+
+/* Imagen de perfil mejorada */
+.profileImage {
+  border-radius: 50%;
+  width: clamp(150px, 25vw, 250px);
+  height: clamp(150px, 25vw, 250px);
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(var(--primary-color), 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+.profileImage:hover {
+  transform: scale(1);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(var(--primary-color), 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Texto introductorio mejorado */
+.introText {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-color);
+  line-height: 1.8;
+  text-align: left;
+  max-width: 600px;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.introText:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+/* Botón mejorado con accesibilidad */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.8s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 24px rgba(var(--primary-color), 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.btnPrimary:hover::before {
+  left: 100%;
+}
+
+.btnPrimary:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Mejoras de responsividad */
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .introText {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .profileImage {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  
+  .btnPrimary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+
+/* Animación de partículas opcional (requiere HTML adicional) */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
