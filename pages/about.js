@@ -21,8 +21,6 @@ export default function About() {
     { src: '/DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate.png', alt: 'DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate' },
     { src: '/scrum_DarioReyesTomas.png', alt: 'Scrum-DaríoReyesTomás'},
     { src: '/programing.jpg', alt: 'programming'},
-    { src: '/profesional.jpeg', alt: 'profesional Informático'},
-    { src: '/InglesB1.jpeg', alt: 'inglesB1'},
   ];
 
   const openModal = (image) => {
@@ -70,14 +68,8 @@ export default function About() {
     />
     <div style={{ marginLeft: '20px', maxWidth: '600px', textAlign: 'left' }}>
       <p className={styles.sobremiTexto}>
-        Ingeniero en Informática con experiencia en desarrollo web
-en Java y Spring Boot, APIs REST, Microservicios, AWS,
-Contenedores, Base de datos SQL y NoSQL, administración
-de sistemas, Sonarqube, CI Jenkins, Scrum, Oracle,
-Mongodb, Apache Jmeter. Especializado en crear
-soluciones eficientes, con enfoque en mejora continua,
-trabajo en equipo y adaptación rápida a nuevas
-tecnologías.
+        Hola, soy Darío ingeniero Informático, un desarrollador web y móvil apasionado por crear soluciones innovadoras y eficientes. 
+        Con experiencia en desarrollo frontend y backend, me encanta enfrentar desafíos y aprender nuevas tecnologías.
       </p>
       <p className={styles.sobremiTexto}>
         He trabajado en proyectos que van desde pequeñas aplicaciones móviles hasta complejas plataformas web, siempre buscando mejorar la experiencia del usuario.
@@ -92,14 +84,13 @@ tecnologías.
           <div className={styles.skillsList}>
             <h2 className={styles.sobremi}>Habilidades</h2>
             <ul>
-              <li>💻 Java versión 21, versión 8,versión 17 (Jakarta), TypeScript,
-                      JavaScript, PHP, PL-SQL, Python.</li>
-              <li>🛠️ Frameworks: Spring Boot, Spring Framework,Angular, React Native, Laravel, CodeIgniter, Next js, Hibernate, JPA.</li>
-              <li>🖥️ Servidores: Apache Tomcat, Eureka Server, Node.js</li>
-              <li>📊 MySQL, PostgreSQL, MongoDB, Firebase, Oracle, H2.</li>
+              <li>💻 Desarrollo Frontend con React y Next.js</li>
+              <li>📱 Desarrollo de Aplicaciones Móviles</li>
+              <li>🖥️ Backend como laravel, CodeIgniter, etc.</li>
+              <li>📊 Bases de Datos: MySQL, MongoDB</li>
               <li>⚙️ Control de Versiones con Git y GitHub</li>
-              <li>🚀 Otras Herramientas: Dbeaver, Sql Developer, Sql DataModeler, Heidi SQL, JSON, Yaml, Git, Github</li>
-              <li>💡 Pasión por Sistemas Operativos Linux (4 años en la utilización de linux como Sistema Operativo principal)</li>
+              <li>🚀 Despliegue en Vercel y Netlify</li>
+              <li>💡 Pasión por Sistemas Operativos Linux</li>
             </ul>
           </div>
 
@@ -137,63 +128,26 @@ tecnologías.
           <div className={styles.experienceItem}>
             <h3>Profesional Informático - Organismo Público Local Electoral del Estado de Veracruz (OPLE)</h3>
             <p className={styles.experienceDate}>Marzo/2025 - Julio/2025</p>
-            <p>• Soporte a sistemas y desarrollo de Software Administrativo.</p>
-    <p>• Desarrollo bajo el sistema operativo Linux/Debian</p>
-    <p>• Marco de trabajo Scrum, Jira</p>
-    <p>• CI (Integración Continua) en Jenkins empleando Pipelines.</p>
-    <p>• Despliegue de API Rest en AWS Amazon Web Service empleando AWS Elastic Beanstalk</p>
-    <p>• AWS RDS (MySQL) y gestión de base de datos.</p>
-    <p>• Desarrollo de APIs REST con Spring Boot 3 y java 21</p>
-    <p>• Diseño de endpoints para CRUD (GET, POST, PUT, DELETE)</p>
-    <p>• Uso de DTOs para separación de capas</p>
-    <p>• Implementación de arquitectura en capas (Controller, Service, Repository, Models)</p>
-    <p>• Integración con base de datos MySQL usando JPA/Hibernate.</p>
-    <p>• Documentación de API Rest.</p>
-    <p>• Manejo de errores y validaciones en backend</p>
-    <p>• Pruebas de endpoints con Postman/Swagger.</p>
+            <p>Mantenimiento y soporte técnico de sistemas y hardware, instalación y actualización de software, gestión de redes (routers, switches y seguridad), y capacitación al personal en nuevas tecnologías.</p>
           </div>
-
-          <div className={styles.experienceItem}>
-            <h3>Desarrollo de Software - Sistema de Bitácoras, Keter S.A DE C.V</h3>
-            <p className={styles.experienceDate}>Agosto/2024 - Diciembre/2024</p>
-              <p>• Diseñé e implementé un sistema de monitoreo de cámaras que automatiza registros C-TPAT y mejora la trazabilidad de eventos de seguridad.</p>
-            <p>• Scrum, entregables, y sprints.</p>
-    <p>• Java 17 y Oracle Database, se dio migración a algunas BD a Mongo Database, documentos JSON.</p>
-    <p>• En Angular frontend módulos para consultas CRUD,</p>
-    <p>• Implementación de autenticación y autorización (JWT / Spring boot Security)</p>
-    <p>• Registro de auditoría para cumplimiento de estándares C-TPAT</p>
-    <p>• Sonarqube para inspección continua de la calidad y seguridad del código fuente.</p>
-    <p>• Optimización de consultas para grandes volúmenes de eventos</p>
-    <p>• Manejo de CORS para integración frontend-backend</p>
-    <p>• Versionado de API REST, Documentación de Apis, y testeo de recursos get,put,delete,post.</p>
-    <p>• Eureka Server para registro de API REST.</p>
-    <p>• Implementación de Virtual Threads.</p>
-    <p>• Spring Batch para carga de datos de archivos csv y registros para base de datos.</p>
-    <p>• Versionamiento de código, y pruebas de integración.</p>
-    <p>• Mantenimiento a Base de datos Oracle creando nuevas tablas y procedimientos almacenados y documente en UML modelos entidad relación, y diagramas de casos de uso.</p>
-            </div>
 
           <div className={styles.experienceItem}>
             <h3>Impartición de Curso Scrum - E.P.F.A.A.</h3>
             <p className={styles.experienceDate}>Febrero/2024 - Abril/2024</p>
-            <p>•Enseñé los fundamentos de la metodología ágil Scrum a estudiantes de nivel preparatoria.</p>
-            <p>•Facilitación de actividades prácticas y dinámicas de grupo para potenciar el aprendizaje. </p> 
-            <p>•Promoví habilidades de trabajo en equipo, gestión del tiempo y liderazgo.</p>
+            <p>Introducción a Scrum, roles y responsabilidades, planificación de sprint, retrospectivas y otras prácticas ágiles.</p>
           </div>
 
           <div className={styles.experienceItem}>
             <h3>Auditoria Informática - INSTITUTO HENRY WALLON SECUNDARIA</h3>
             <p className={styles.experienceDate}>Octubre/2023 - Diciembre/2023</p>
-            <p>•Les expliqué conceptos básicos de auditoría en sistemas y seguridad informática.</p>
-            <p>•Implementación de actividades prácticas para identificar vulnerabilidades y buenas prácticas en seguridad digital.</p>
-            <p>•Fomenté el interés por la ciberseguridad y la gestión de riesgos tecnológicos entre los estudiantes.</p>
+            <p>Realicé un análisis de la eficacia de los controles de seguridad y la integridad de los sistemas informáticos y la infraestructura tecnológica de la institución.</p>
           </div>
 
           <div className={styles.experienceItem}>
             <h3>Desarrollo de una aplicación móvil - Instituto Tecnológico Superior de Teziutlán</h3>
             <p className={styles.experienceDate}>Septiembre/2023 - Diciembre/2023</p>
-            <p>•Desarrollé una aplicación móvil para el seguimiento de gastos, utilizando Android Studio, Java y Firebase.</p>
-            <p>•Al igual que una aplicación móvil para un dispensador de bebidas</p>
+            <p>Desarrollé una aplicación móvil para el seguimiento de gastos, utilizando Android Studio, Java y Firebase.</p>
+            <p>Al igual que una aplicación móvil para un dispensador de bebidas</p>
           </div>
         </section>
 
@@ -225,28 +179,10 @@ tecnologías.
           </div>
         )}
 
-        {/* Barra de progreso de competencias técnincas */}
+        {/* Barra de progreso de habilidades */}
         <section className={styles.skillsSection}>
           <h2 className={styles.sobremi}>Competencias Técnicas</h2>
           <div className={styles.skillsContainer}>
-            <div className={styles.skill}>
-              <p>Java</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.java}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>Spring Boot</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.spring}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>Angular</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.angular}`}></div>
-              </div>
-            </div>
             <div className={styles.skill}>
               <p>React</p>
               <div className={styles.skillBar}>
@@ -269,30 +205,6 @@ tecnologías.
               <p>Git</p>
               <div className={styles.skillBar}>
                 <div className={`${styles.skillLevel} ${styles.git}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>MySQL</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.mysql}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>PostgreSQL</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.postgresql}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>MongoDB</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.mongodb}`}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <p>Linux</p>
-              <div className={styles.skillBar}>
-                <div className={`${styles.skillLevel} ${styles.linux}`}></div>
               </div>
             </div>
           </div>

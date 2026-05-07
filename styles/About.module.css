@@ -170,12 +170,12 @@
 }
 
 .react {
-  width: 70%;
+  width: 60%;
   background-color: #0070f3;
 }
 
 .nextjs {
-  width: 55%;
+  width: 75%;
   background-color: #0070f3;
 }
 
@@ -185,42 +185,7 @@
 }
 
 .git {
-  width: 75%;
-  background-color: #0070f3;
-}
-
-.java {
-  width: 70%;
-  background-color: #0070f3;
-}
-
-.spring {
-  width: 85%;
-  background-color: #0070f3;
-}
-
-.angular {
-  width: 77%;
-  background-color: #0070f3;
-}
-
-.mysql {
-  width: 85%;
-  background-color: #0070f3;
-}
-
-.postgresql {
-  width: 80%;
-  background-color: #0070f3;
-}
-
-.mongodb {
-  width: 75%;
-  background-color: #0070f3;
-}
-
-.linux {
-  width: 90%;
+  width: 76%;
   background-color: #0070f3;
 }
 
@@ -232,31 +197,6 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 16px var(--shadow-color);
-}
-
-.skillItem {
-  margin-bottom: 1rem;
-}
-
-.skillName {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: var(--text-light);
-}
-
-.progressBar {
-  background-color: #ddd;
-  border-radius: 10px;
-  height: 20px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.progress {
-  background: var(--primary-gradient);
-  height: 100%;
-  border-radius: 10px;
-  transition: width 0.3s ease;
 }
 
 .carousel img {
