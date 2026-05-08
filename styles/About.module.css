@@ -169,8 +169,23 @@
   border-radius: 5px;
 }
 
-.react {
+.java {
+  width: 70%;
+  background-color: #0070f3;
+}
+
+.spring {
+  width: 75%;
+  background-color: #0070f3;
+}
+
+.angular {
   width: 60%;
+  background-color: #0070f3;
+}
+
+.react {
+  width: 65%;
   background-color: #0070f3;
 }
 
@@ -186,6 +201,26 @@
 
 .git {
   width: 76%;
+  background-color: #0070f3;
+}
+
+.mysql {
+  width: 60%;
+  background-color: #0070f3;
+}
+
+.postgresql {
+  width: 60%;
+  background-color: #0070f3;
+}
+
+.mongodb{
+  width: 66%;
+  background-color: #0070f3;
+}
+
+.linux{
+  width:90%;
   background-color: #0070f3;
 }
 
