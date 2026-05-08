@@ -6,7 +6,9 @@ import ProjectCard from '../components/ProjectCard';
 import styles from '../styles/Projects.module.css';
 
 const projects = [
-  { title: 'Dispensador de bebidas', description: 'Realice en equipo un dispensador de bebidas que mezcla varias bebidas en una, aquí la página para promocionarla', link: 'https://tec-dispensador-beta1.netlify.app/' },
+  { title: 'Dispensador de bebidas', 
+    description: 'Realice en equipo un dispensador de bebidas que mezcla varias bebidas en una, al igual que una aplicación móvil con la cual se manejaba, '+
+    'aquí la página para promocionarla', link: 'https://tec-dispensador-beta1.netlify.app/' },
   { title: 'Proyecto 2', description: 'Descripción del proyecto 2', images: ['/image1.jpg', '/image2.jpg'] },
   { title: 'Proyecto 3', description: 'Descripción del proyecto 3', images: ['/image3.jpg'] },
   { title: 'Proyecto 4', description: 'Descripción del proyecto 4', link: 'https://proyecto2.com' }

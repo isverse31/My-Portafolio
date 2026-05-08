@@ -22,7 +22,7 @@ export default function About() {
     { src: '/scrum_DarioReyesTomas.png', alt: 'Scrum-DaríoReyesTomás'},
     { src: '/programing.jpg', alt: 'programming'},
     { src: '/profesional.jpeg', alt: 'profesional Informático'},
-    { src: '/InglesB1.jpeg', alt: 'inglesB1'},
+    { src: '/inglesB1.jpeg', alt: 'inglesB1'},
   ];
 
   const openModal = (image) => {
