@@ -1,104 +1,218 @@
-
 .projectsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .projectCard {
-    background-color: rgba(255, 255, 255, 0.541);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .projectCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(245, 244, 244, 0.1);
-  }
-  
-  .projectCard h2 {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-    color: #333;
-  }
-  .titulo{
-    color:bisque;
-  }
-  
-  .projectCard p {
-    margin-bottom: 1.5rem;
-    color: #f3f1f1;
-  }
-  
-  .projectCard a {
-    display: inline-block;
-    color: #0070f3;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid #0070f3;
-    transition: color 0.3s, border-bottom 0.3s;
-  }
-  
-  .projectCard a:hover {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
 
-  .projectCard button {
-    display: inline-block;
-    color: #0070f3;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid #0070f3;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom 0.3s;
-  }
-  
-  .projectCard button:hover {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-  }
+.projectCard {
+  background-color: rgba(255, 255, 255, 0.541);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-  .modalContent {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-    position: relative;
-  }
+.projectCard h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #f3f1f1;
+}
 
-  .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+.titulo {
+  color: bisque;
+}
 
-  .modalImage {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem 0;
-  }
+.projectCard p {
+  margin-bottom: 1.5rem;
+  color: #f3f1f1;
+}
+
+.projectCard a {
+  display: inline-block;
+  color: #0070f3;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #0070f3;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.projectCard a:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+.projectCard button {
+  display: inline-block;
+  color: #0070f3;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0070f3;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.projectCard button:hover {
+  color: #0056b3;
+  border-bottom-color: #0056b3;
+}
+
+/* ── Modal ── */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: linear-gradient(145deg, #ffffff, #f4f6f9);
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  scrollbar-width: thin;
+  scrollbar-color: #0070f3 transparent;
+}
+
+.modalContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background-color: #0070f3;
+  border-radius: 10px;
+}
+
+.modalContent h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.modalContent p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #0070f3;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.closeButton:hover {
+  color: #0056b3;
+  transform: scale(1.2) rotate(90deg);
+}
+
+/* ── Imágenes del modal ── */
+
+.modalImageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modalImageWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.modalImageWrapper:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.modalImage {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.modalImage:hover {
+  transform: scale(1.06);
+}
+
+/* Si solo hay una imagen, que ocupe más altura */
+.modalImageGrid:has(.modalImageWrapper:only-child) .modalImage {
+  height: 220px;
+}
+
+/* ── Lightbox ── */
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  cursor: zoom-out;
+  padding: 1rem;
+}
+
+.lightboxImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  animation: lightboxFadeIn 0.2s ease;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.lightboxClose:hover {
+  color: #0070f3;
+  transform: scale(1.2) rotate(90deg);
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
