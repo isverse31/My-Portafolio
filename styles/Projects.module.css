@@ -65,6 +65,8 @@
 
 /* ── Modal ── */
 
+/* ── Modal ── */
+
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -72,12 +74,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1500;
   padding: 1rem;
   backdrop-filter: blur(4px);
 }
 
 .modalContent {
+  /* ✅ Solo UNA declaración de position */
+  position: relative;
   background: linear-gradient(145deg, #ffffff, #f4f6f9);
   padding: 2.5rem 2rem 2rem;
   border-radius: 16px;
@@ -85,10 +89,10 @@
   max-width: 600px;
   max-height: 85vh;
   overflow-y: auto;
-  position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   scrollbar-width: thin;
   scrollbar-color: #0070f3 transparent;
+  /* ✅ Elimina z-index aquí — el overlay ya lo maneja */
 }
 
 .modalContent::-webkit-scrollbar {
@@ -143,33 +147,38 @@
 }
 
 .modalImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .modalImageWrapper:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 .modalImage {
   width: 100%;
-  height: 140px;
+  height: 100%;
   object-fit: cover;
   display: block;
   cursor: zoom-in;
   transition: transform 0.3s ease;
 }
-
+/*
 .modalImage:hover {
   transform: scale(1.06);
 }
 
-/* Si solo hay una imagen, que ocupe más altura */
-.modalImageGrid:has(.modalImageWrapper:only-child) .modalImage {
-  height: 220px;
+/* Si solo hay una imagen, que ocupe más ancho y mantenga la proporción 
+.modalImageGrid:has(.modalImageWrapper:only-child) .modalImageWrapper {
+  aspect-ratio: 16 / 9;
 }
+  */
 
 /* ── Lightbox ── */
 
