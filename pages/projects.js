@@ -21,14 +21,9 @@ const projects = [
     images: ['/bitacora1.png', '/bitacora2.png', '/bitacora3.png'],
   },
   {
-    title: 'Proyecto 3',
-    description: 'Descripción del proyecto 3.',
-    images: ['/image3.jpg'],
-  },
-  {
-    title: 'Proyecto 4',
-    description: 'Descripción del proyecto 4.',
-    link: 'https://proyecto2.com',
+    title: 'Aplicación Móvil de una Taquería',
+    description: 'Actualmente me encuento desarrollando una aplicación móvil para una taquería local, con el objetivo de facilitar la gestión de pedidos y mejorar la experiencia del cliente.',
+    images: ['/taqueria1.jpeg', '/taqueria2.jpeg', '/taqueria3.jpeg', '/taqueria4.jpeg'],
   },
 ];
 
