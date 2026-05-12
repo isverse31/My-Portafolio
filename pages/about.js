@@ -126,6 +126,8 @@ tecnologías.
                 <img src="/Dispensador2.png" alt="Backend Development" />
                 <p className="legend">Backend Development</p>
               </div>
+              <div>
+              </div>
             </Carousel>
           </div>
         </section>

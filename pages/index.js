@@ -33,7 +33,8 @@ export default function Home() {
               className={styles.profileImage}
             />
             <p className={styles.introText}>
-              Hola, soy Darío, un desarrollador web y móvil con pasión por crear experiencias digitales increíbles. Me especializo en el desarrollo de aplicaciones eficientes y escalables con tecnologías modernas como React, Next.js, y más.
+              Hola, soy Darío, un desarrollador de software, web y móvil con pasión por crear experiencias digitales increíbles. 
+              Me especializo en el desarrollo de aplicaciones eficientes y escalables con tecnologías modernas como Spring boot, React, Next.js, y más.
             </p>
           </div>
           <a href="/about" className={styles.btnPrimary}>
