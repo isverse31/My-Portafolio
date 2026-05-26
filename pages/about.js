@@ -21,6 +21,7 @@ export default function About() {
     { src: '/DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate.png', alt: 'DARÍOREYES TOMÁS-IINF- Cisco IT E-certificate' },
     { src: '/scrum_DarioReyesTomas.png', alt: 'Scrum-DaríoReyesTomás'},
     { src: '/programing.jpg', alt: 'programming'},
+    { src: '/ConstanciaJsoft.jpeg', alt: 'ConstanciaJsoft'},
     { src: '/profesional.jpeg', alt: 'profesional Informático'},
     { src: '/inglesB1.jpeg', alt: 'inglesB1'},
   ];
@@ -62,7 +63,7 @@ export default function About() {
   <h1 className={styles.sobremi}>Sobre Mí</h1>
   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
     <Image 
-      src="/yo6.jpg" 
+      src="/yo_about.jpeg" 
       alt="Mi foto"
       width={180} 
       height={180}
@@ -108,23 +109,23 @@ tecnologías.
             <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
               <div>
                 <img src="/bitacora1.png" alt="Frontend Development" />
-                <p className="legend">Frontend Development</p>
+                <p className="legend">Sistema de Bitácoras</p>
               </div>
               <div>
                 <img src="/bitacora2.png" alt="Mobile Development" />
-                <p className="legend">Mobile Development</p>
+                <p className="legend">Sistema de Bitácoras</p>
               </div>
               <div>
                 <img src="/bitacora3.png" alt="Backend Development" />
-                <p className="legend">Backend Development</p>
+                <p className="legend">Sistema de Bitácoras</p>
               </div>
               <div>
                 <img src="/Dispensador1.png" alt="Backend Development" />
-                <p className="legend">Backend Development</p>
+                <p className="legend">Dispensador</p>
               </div>
               <div>
                 <img src="/Dispensador2.png" alt="Backend Development" />
-                <p className="legend">Backend Development</p>
+                <p className="legend">Dispensador</p>
               </div>
             </Carousel>
           </div>
@@ -136,7 +137,7 @@ tecnologías.
 
           <div className={styles.experienceItem}>
             <h3>Profesional Informático - Organismo Público Local Electoral del Estado de Veracruz (OPLE)</h3>
-            <p className={styles.experienceDate}>Marzo/2025 - Julio/2025</p>
+            <p className={styles.experienceDate}> Junio 2025 a Abril 2026</p>
             <p>• Soporte a sistemas y desarrollo de Software Administrativo.</p>
     <p>• Desarrollo bajo el sistema operativo Linux/Debian</p>
     <p>• Marco de trabajo Scrum, Jira</p>
@@ -155,7 +156,7 @@ tecnologías.
 
           <div className={styles.experienceItem}>
             <h3>Desarrollo de Software - Sistema de Bitácoras, Keter S.A DE C.V</h3>
-            <p className={styles.experienceDate}>Agosto/2024 - Diciembre/2024</p>
+            <p className={styles.experienceDate}> octubre 2024 a mayo 2025</p>
               <p>• Diseñé e implementé un sistema de monitoreo de cámaras que automatiza registros C-TPAT y mejora la trazabilidad de eventos de seguridad.</p>
             <p>• Scrum, entregables, y sprints.</p>
     <p>• Java 17 y Oracle Database, se dio migración a algunas BD a Mongo Database, documentos JSON.</p>
@@ -307,7 +308,7 @@ tecnologías.
 
         {/* Sección de hobbies */}
         <section className={styles.hobbiesSection}>
-          <h2 className={styles.sobremi}>Hobbies</h2>
+          <h2 className={styles.sobremi}>Pasatiempos</h2>
           <div className={styles.hobbiesContainer}>
             <div className={styles.hobby}>
               <Image 
@@ -317,7 +318,7 @@ tecnologías.
                 height={150}
                 className={styles.hobbyImage}
               />
-              <p>ajedrez</p>
+              <p>Ajedrez</p>
             </div>
             <div className={styles.hobby}>
               <Image 

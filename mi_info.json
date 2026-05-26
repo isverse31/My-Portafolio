@@ -1,4 +1,4 @@
 {
-  "Hola": "Hola!!! algo que quisieras saber sobre mí??",
-  "quien eres": "Soy Darío, Ingeniero informático"
+  "¿Cuáles son los 4 pilares de la POO?": "Encapsulamiento: proteger datos usando atributos privados y métodos getters/setters. Herencia: una clase puede heredar propiedades y métodos de otra. Polimorfismo: un método puede comportarse diferente según el objeto. Abstracción: mostrar solo lo necesario y ocultar implementación.",
+  "Dame un ejemplo de encapsulamiento": "private String nombre;  public String getNombre() {    return nombre; }  public void setNombre(String nombre) {    this.nombre = nombre; }"
 }

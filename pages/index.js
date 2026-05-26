@@ -26,7 +26,7 @@ export default function Home() {
           </motion.h1>
           <div className={styles.presentation}>
             <Image
-              src="/yo3.jpeg"
+              src="/foto_cv.jpeg"
               alt="Mi foto"
               width={290}
               height={290}
